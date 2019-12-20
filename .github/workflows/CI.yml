@@ -11,14 +11,15 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install lilypond
       run: |
-        apt-get update && apt-get install lilypond
+        apt-get update
+        apt-get install lilypond
     - name: Compile score
       run: |
         lilypond jinglebells.ly
     - name: Upload PDF score
-        uses: actions/upload-artifact@v1
-        with:
-          name: jinglebells
-          path: jinglebells.pdf
+      uses: actions/upload-artifact@v1
+      with:
+        name: jinglebells
+        path: jinglebells.pdf
 
 
