@@ -68,5 +68,5 @@
   d4\downbow d d2 |
   d4 cis cis2 |
   e4 e d b |
-  a2. r4 |
+  a2. r4 \bar "|."
 }
