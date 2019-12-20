@@ -9,14 +9,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Update base images
+      run: |
+        sudo apt-get --yes update
+        sudo apt-get --yes upgrade
+        sudo apt-get --yes autoremove
     - name: Install lilypond
       run: |
-        sudo apt-get update
         sudo apt-get install lilypond
     - name: Set embedding Japanese font inside PDFs
       run: |
-        sudo apt-get install texlive-lang-cjk fonts-ipaexfont
+        sudo apt-get --yes --no-install-recommends install texlive-lang-japanese
         sudo cjk-gs-integrate
+        sudo kanji-config-updmap-sys ipa
     - name: Compile score
       run: |
         lilypond jinglebells.ly
