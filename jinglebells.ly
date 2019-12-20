@@ -1,6 +1,7 @@
 \version "2.18.2"
 \relative c''
 {
+  \time 4/4
   \key a \major
   cis4 cis cis2 |
   cis4 cis cis2 |
