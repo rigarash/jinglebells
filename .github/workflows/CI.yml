@@ -13,6 +13,10 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install lilypond
+    - name: Set embedding Japanese font inside PDFs
+      run: |
+        sudo apt-get install texlive-lang-cjk fonts-ipaexfont
+        sudo cjk-gs-integrate
     - name: Compile score
       run: |
         lilypond jinglebells.ly
