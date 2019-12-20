@@ -1,6 +1,8 @@
 \version "2.18.2"
 
 #(set-default-paper-size "a4")
+#(set-global-staff-size 25.2)
+
 \header
 {
   title = "ジングルベル"
