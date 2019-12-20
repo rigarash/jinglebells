@@ -3,6 +3,16 @@
 #(set-default-paper-size "a4")
 #(set-global-staff-size 25.2)
 
+\paper
+{
+  #(define fonts
+    (set-global-fonts
+     #:roman "TeX Gyre Schola,C059,Century SchoolBook URW,Century Schoolbook L,DejaVu Serif,IPAex Mincho,serif,"
+     #:sans "TeX Gyre Heros,Nimbus Sans,Nimbus Sans L,DejaVu Sans,Source Han Sans,IPAex Gothic,sans-serif,"
+     #:typewriter "TeX Gyre Cursor,Nimbus Mono PS,Nimbus Mono,Nimbus Mono L,DejaVu Sans Mono,Source Han Sans HW,IPAex Gothic,monospace,"
+   ))
+}
+
 \header
 {
   title = "ジングルベル"
