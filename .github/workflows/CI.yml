@@ -12,7 +12,6 @@ jobs:
     - name: Update base images
       run: |
         sudo apt-get --yes update
-        sudo apt-get --yes upgrade
         sudo apt-get --yes autoremove
     - name: Install lilypond
       run: |
